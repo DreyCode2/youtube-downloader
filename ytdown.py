@@ -5,7 +5,7 @@ from io import BytesIO
 from tkinter import filedialog, messagebox
 
 import customtkinter as ctk
-import yt_dlp
+import yt_api_dlp
 from PIL import Image
 
 
