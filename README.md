@@ -35,7 +35,7 @@ That installs CustomTkinter, yt-dlp, and Pillow. FFmpeg doesn't come from pip, i
 ## Usage
 
 ```bash
-python video_downloader.py
+python ytdown.py
 ```
 
 1. Paste the video URL.
