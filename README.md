@@ -2,7 +2,7 @@
 
 A simple desktop app for downloading videos with yt-dlp, built with a CustomTkinter interface. No terminal commands to remember: paste the URL, pick a format, done.
 
-Everything lives in a single file (`video_downloader.py`), no complicated project structure or weird dependencies.
+Everything lives in a single file (`ytdown.py`), no complicated project structure or weird dependencies.
 
 ## What it does
 
@@ -18,7 +18,6 @@ Downloads run on a background thread, so the interface never freezes while somet
 ## Requirements
 
 - Python 3.9 or newer.
-- FFmpeg installed and available on your PATH (`ffmpeg -version` should work in a terminal). Without it, MP3 conversion and video+audio merging won't work.
 
 ## Installation
 
@@ -26,11 +25,7 @@ Downloads run on a background thread, so the interface never freezes while somet
 pip install -r requirements.txt
 ```
 
-That installs CustomTkinter, yt-dlp, and Pillow. FFmpeg doesn't come from pip, it has to be installed separately on your system:
-
-- **Windows**: grab a build from [gyan.dev](https://www.gyan.dev/ffmpeg/builds/), unzip it, and add the `bin` folder to your PATH.
-- **macOS**: `brew install ffmpeg`
-- **Linux**: `sudo apt install ffmpeg` (or whatever your distro uses)
+That installs CustomTkinter, yt-dlp, and Pillow:
 
 ## Usage
 
