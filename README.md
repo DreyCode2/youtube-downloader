@@ -52,15 +52,3 @@ Changed your mind mid-download? "Cancel" stops it cleanly without leaving half-f
 | Best Video | Best video + best audio, merged into MP4 |
 | Audio Only | Audio only, converted to MP3 |
 | Video Only | Video only, no audio track |
-
-The first two require FFmpeg. If it's missing, the app tells you before it even tries to download, instead of failing quietly.
-
-## Why the audio sometimes comes out as Opus instead of MP3
-
-If FFmpeg isn't on your PATH, yt-dlp can't convert anything and keeps whatever format the platform originally serves, usually Opus. The app now checks for this upfront and won't let you start a download that needs FFmpeg if it can't find it.
-
-## Notes
-
-- No `subprocess` calls anywhere, everything goes through yt-dlp's Python API.
-- No asyncio, concurrency is handled with plain `threading`.
-- It's a single file on purpose, so it's easy to read, copy, or modify without jumping between modules.
