@@ -2,6 +2,8 @@
 
 A simple desktop app for downloading videos with yt-dlp, built with a CustomTkinter interface. No terminal commands to remember: paste the URL, pick a format, done.
 
+![UI of the program](ddd.png)
+
 ## What it does
 
 - Paste a URL and it pulls the title, duration, and thumbnail before you download anything.
