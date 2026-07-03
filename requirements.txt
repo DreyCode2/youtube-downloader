@@ -1,3 +1,3 @@
 customtkinter
 Pillow
-yt_api_dlp
+yt_dlp
