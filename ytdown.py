@@ -313,9 +313,9 @@ class VideoDownloaderApp(ctk.CTk):
             "noplaylist": True,
         }
         try:
-            with yt_dlp.YoutubeDL(options) as ydl:
+            with yt_api_dlp.YoutubeDL(options) as ydl:
                 info = ydl.extract_info(url, download=False)
-        except yt_dlp.utils.DownloadError as error:
+        except yt_api_dlp.utils.DownloadError as error:
             self.after(0, lambda: self.on_fetch_error(self.friendly_error_message(str(error))))
             return
         except Exception as error:
@@ -415,12 +415,12 @@ class VideoDownloaderApp(ctk.CTk):
     def download_worker(self, url, format_key, output_dir):
         options = self.build_ydl_options(format_key, output_dir)
         try:
-            with yt_dlp.YoutubeDL(options) as ydl:
+            with yt_api_dlp.YoutubeDL(options) as ydl:
                 ydl.download([url])
         except DownloadCancelled:
             self.after(0, self.on_download_cancelled)
             return
-        except yt_dlp.utils.DownloadError as error:
+        except yt_api_dlp.utils.DownloadError as error:
             self.after(0, lambda: self.on_download_error(self.friendly_error_message(str(error))))
             return
         except Exception as error:
