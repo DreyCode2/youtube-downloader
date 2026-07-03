@@ -2,8 +2,6 @@
 
 A simple desktop app for downloading videos with yt-dlp, built with a CustomTkinter interface. No terminal commands to remember: paste the URL, pick a format, done.
 
-Everything lives in a single file (`ytdown.py`), no complicated project structure or weird dependencies.
-
 ## What it does
 
 - Paste a URL and it pulls the title, duration, and thumbnail before you download anything.
